@@ -22,6 +22,27 @@ ul.header li a {
   padding: 20px;
   display: inline-block;
 }
+
+ul.footer li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.footer {
+  background-color: #111;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+}
+ul.footer li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+
 .content {
   background-color: #FFF;
   padding: 20px;

@@ -1,6 +1,20 @@
 import React, { Component } from "react";
- 
+import {
+  Link
+} from "react-router-dom";
 class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      fieldVal: ""
+    }
+  }
+  update = (e) => {
+    console.log(e.target.value);
+    this.props.onUpdate(e.target.value);
+    this.setState({fieldVal: e.target.value});
+  };
   render() {
     return (
       <div>
@@ -13,9 +27,13 @@ class Home extends Component {
         dis parturient montes, nascetur ridiculus mus.</p>
  
         <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+        <input type="text"onChange={this.update}
+          value={this.state.fieldVal} />
+        <Link to="/App">Go to Results</Link>
       </div>
     );
   }
+  
 }
  
 export default Home;
