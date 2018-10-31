@@ -26,6 +26,7 @@ class Main extends Component {
  };
 
   render() {
+    // Added nav passing props, footer
     return (
       <BrowserRouter>
         <div>
